@@ -15,4 +15,4 @@ Demo: https://lotharthesavior.github.io/interestingForms/example1/first-test.htm
 
 Without any Javascript
 
-Demo: https://lotharthesavior.github.io/interestingForms/example2/first-test.html
+Demo: https://lotharthesavior.github.io/interestingForms/example2/form1.html
