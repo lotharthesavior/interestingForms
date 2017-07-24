@@ -1,0 +1,314 @@
+
+.invisible{
+	display: none;
+}
+
+.step1,
+.step2,
+.step3{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+
+	min-width: 350px;
+	margin: 0 auto;
+	min-height: 100px;
+	/*border: 1px solid #000;*/
+	padding: 15px;
+	background-color: #fff;
+
+	/* flex center */
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-align-items: center;
+	      align-items: center;
+	-webkit-justify-content: center;
+	      justify-content: center;
+
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.step1{
+	z-index: 13;
+}
+.step2{
+	z-index: 12;
+}
+.step3{
+	z-index: 11;
+}
+
+.step2,
+.step3{
+	opacity: 0;
+	/*visibility: hidden;*/
+
+	transition: 3s ease-out 1s;
+    -webkit-transition: 3s ease-out 1s;
+    -moz-transition: 3s ease-out 1s;
+    -o-transition: 3s ease-out 1s;
+}
+
+/*  ==================================================================
+====================== step 1 ========================================
+==================================================================  */
+
+/* effect */
+/*input[name="step2_call"]:checked ~ .step2{
+	max-height: 1000px;
+	overflow: hidden;
+	border: 1px solid #000;
+	padding: 10px;
+}
+
+input[name="step3_call"]:checked ~ .step3{
+	max-height: 1000px;
+	overflow: hidden;
+	border: 1px solid #000;
+	padding: 10px;
+}*/
+
+/*  explode effect -------------------------------- */
+.explode_effect{
+	overflow: hidden;
+	
+	transition: 
+		opacity 1s linear;
+	-webkit-transition: 
+    	opacity 1s linear;
+    -moz-transition: 
+    	opacity 1s linear;
+    -o-transition: 
+    	opacity 1s linear;
+
+	h1 {
+	 	position: relative;
+			
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+
+		transition: 
+			all 2s ease 0s;
+	    -webkit-transition: 
+	    	all 2s ease 0s;
+	    -moz-transition: 
+	    	all 2s ease 0s;
+	    -o-transition: 
+	    	all 2s ease 0s;
+	} 
+
+	.input_wrapper {
+
+		box-sizing: border-box;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+		max-height: 100px;
+
+		/* flex center */
+		display: -webkit-flex;
+		display:         flex;
+		-webkit-align-items: center;
+		      align-items: center;
+		-webkit-justify-content: center;
+		      justify-content: center;
+
+		label{
+			min-width: 150px;
+			display: inline-block;
+		}
+
+		label.input1,
+		label.input2,
+		label.input3,
+		label.input4,
+		input.input1,
+		input.input2,
+		input.input3,
+		input.input4 {
+			position: relative;
+			
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+
+			transition: 
+				all 2s ease 0s;
+		    -webkit-transition: 
+		    	all 2s ease 0s;
+		    -moz-transition: 
+		    	all 2s ease 0s;
+		    -o-transition: 
+		    	all 2s ease 0s;
+		}
+
+	}
+
+	.submit-button {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		width: 100%;
+		text-align: center;
+
+		.submit-button-label{
+			margin-top: 15px;
+			border: 1px solid #000;
+			border-radius: 5px;
+			padding: 5px 15px;
+
+			position: relative;
+			
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+
+			transition: 
+				all 2s ease 0s;
+		    -webkit-transition: 
+		    	all 2s ease 0s;
+		    -moz-transition: 
+		    	all 2s ease 0s;
+		    -o-transition: 
+		    	all 2s ease 0s;
+		}
+	}
+
+}
+
+
+.explode_effect1{
+	opacity: 1;
+}
+
+#step2_call:checked ~ .explode_effect1{
+	/*display: none;*/
+	z-index: 10px !important;
+	opacity: 0;
+
+	h1{
+		top: -1000px !important;
+	}
+
+	.input_wrapper{
+
+		/* disappear with the current form */
+		label.input1 {
+			top: -1000px !important;
+			left: -1000px !important;
+		}
+
+		label.input2 {
+			left: -5000px !important;
+		}
+
+		label.input3 {
+			top: 10000px !important;
+			left: -10000px !important;
+		}
+
+		input.input1 {
+			top: -1000px !important;
+			left: 5000px !important;
+		}
+
+		input.input2 {
+			left: 5000px !important;
+		}
+
+		input.input3 {
+			top: 10000px !important;
+			left: 5000px !important;
+		}
+
+	}
+
+	.submit-button {
+		
+		.submit-button-label{
+			top: 20000px !important;
+		}
+
+	}
+
+}
+#step2_call:checked ~ .step2{
+	opacity: 1;
+	z-index: 13 !important;
+}
+
+#step3_call:checked ~ .explode_effect2{
+	/*display: none;*/
+	z-index: 10px !important;
+	opacity: 0;
+
+	h1{
+		top: -1000px !important;
+	}
+
+	.input_wrapper{
+
+		/* disappear with the current form */
+		label.input1 {
+			top: -1000px !important;
+			left: -1000px !important;
+		}
+
+		label.input2 {
+			left: -5000px !important;
+		}
+
+		label.input3 {
+			top: 10000px !important;
+			left: -10000px !important;
+		}
+
+		label.input4 {
+			top: 10000px !important;
+			left: -10000px !important;
+		}
+
+		input.input1 {
+			top: -1000px !important;
+			left: 5000px !important;
+		}
+
+		input.input2 {
+			left: 5000px !important;
+		}
+
+		input.input3 {
+			top: 10000px !important;
+			left: 5000px !important;
+		}
+
+		input.input4 {
+			top: 10000px !important;
+			left: 5000px !important;
+		}
+
+	}
+
+	.submit-button {
+		
+		.submit-button-label{
+			top: 20000px !important;
+		}
+
+	}
+
+}
+#step3_call:checked ~ .step3{
+	opacity: 1;
+	z-index: 13 !important;
+}
+/*  / explode effect -------------------------------- */
+
+/*  ==================================================================
+====================== step 1 ========================================
+==================================================================  */
